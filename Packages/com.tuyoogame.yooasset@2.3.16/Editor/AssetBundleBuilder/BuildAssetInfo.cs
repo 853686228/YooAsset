@@ -8,7 +8,7 @@ namespace YooAsset.Editor
     public class BuildAssetInfo
     {
         private bool _isAddAssetTags = false;
-        private readonly HashSet<string> _referenceBundleNames = new HashSet<string>();
+        private readonly HashSet<string> _referenceBundleNames = new HashSet<string>(); //依赖该资源的BundleName
 
         /// <summary>
         /// 收集器类型

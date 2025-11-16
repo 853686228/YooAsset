@@ -23,10 +23,12 @@ namespace YooAsset.Editor
             // 开始构建
             string pipelineOutputDirectory = buildParametersContext.GetPipelineOutputDirectory();
             BuildAssetBundleOptions buildOptions = builtinBuildParameters.GetBundleBuildOptions();
-            AssetBundleManifest unityManifest = BuildPipeline.BuildAssetBundles(pipelineOutputDirectory, buildMapContext.GetPipelineBuilds(), buildOptions, buildParametersContext.Parameters.BuildTarget);
+            AssetBundleManifest unityManifest = BuildPipeline.BuildAssetBundles(pipelineOutputDirectory,
+                buildMapContext.GetPipelineBuilds(), buildOptions, buildParametersContext.Parameters.BuildTarget);
             if (unityManifest == null)
             {
-                string message = BuildLogger.GetErrorMessage(ErrorCode.UnityEngineBuildFailed, "UnityEngine build failed !");
+                string message =
+                    BuildLogger.GetErrorMessage(ErrorCode.UnityEngineBuildFailed, "UnityEngine build failed !");
                 throw new Exception(message);
             }
 
@@ -34,7 +36,8 @@ namespace YooAsset.Editor
             string unityOutputManifestFilePath = $"{pipelineOutputDirectory}/{YooAssetSettings.OutputFolderName}";
             if (System.IO.File.Exists(unityOutputManifestFilePath) == false)
             {
-                string message = BuildLogger.GetErrorMessage(ErrorCode.UnityEngineBuildFatal, $"Not found output {nameof(AssetBundleManifest)} file : {unityOutputManifestFilePath}");
+                string message = BuildLogger.GetErrorMessage(ErrorCode.UnityEngineBuildFatal,
+                    $"Not found output {nameof(AssetBundleManifest)} file : {unityOutputManifestFilePath}");
                 throw new Exception(message);
             }
 

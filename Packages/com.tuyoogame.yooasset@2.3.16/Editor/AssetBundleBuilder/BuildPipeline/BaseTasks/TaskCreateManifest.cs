@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
 namespace YooAsset.Editor
 {
@@ -46,11 +47,11 @@ namespace YooAsset.Editor
             manifest.BundleList = CreatePackageBundleList(buildMapContext);
 
             // 1. 处理资源清单的资源对象
-            ProcessPacakgeAsset(manifest);
+            ProcessPacakgeAsset(manifest);   //NOTE: 通过构建前创建的BuildInfo进行查询 (Asset => dependent Bundles)
 
             // 2. 处理资源包的依赖列表
             if (processBundleDepends)
-                ProcessBundleDepends(context, manifest);
+                ProcessBundleDepends(context, manifest); //通过Unity引擎构建后生成的Manifest查询bundle间的依赖 (bundle => dependent Bundles)
 
             // 3. 处理资源包的标签集合
             if (processBundleTags)

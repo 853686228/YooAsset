@@ -119,7 +119,7 @@ namespace YooAsset.Editor
             context.AssetFileCount = allBuildAssetInfos.Count;
             context.Command = collectResult.Command;
 
-            // 9. 移除不参与构建的资源
+            // 9. 移除不参与构建的资源 
             List<BuildAssetInfo> removeBuildList = new List<BuildAssetInfo>();
             foreach (var buildAssetInfo in allBuildAssetInfos.Values)
             {

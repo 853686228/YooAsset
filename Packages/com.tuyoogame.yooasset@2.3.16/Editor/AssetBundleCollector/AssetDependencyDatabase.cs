@@ -37,6 +37,7 @@ namespace YooAsset.Editor
         /// </summary>
         public void CreateDatabase(bool readCacheDatabaseFile, string databaseFilePath)
         {
+            readCacheDatabaseFile = false;
             _databaseFilePath = databaseFilePath;
             _database.Clear();
 

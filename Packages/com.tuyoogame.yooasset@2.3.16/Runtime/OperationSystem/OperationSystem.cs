@@ -21,7 +21,7 @@ namespace YooAsset
         private static Action<string, AsyncOperationBase> _finishCallback = null;
 
         // 计时器相关
-        private static Stopwatch _watch;
+        private static Stopwatch _watch; //感觉用Time.elapsedTime也可以 直接用Unity内置的Time类
         private static long _frameTime;
 
         /// <summary>

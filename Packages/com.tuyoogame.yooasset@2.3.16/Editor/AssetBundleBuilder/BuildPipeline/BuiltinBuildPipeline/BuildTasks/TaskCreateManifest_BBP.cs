@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace YooAsset.Editor
 {
@@ -18,7 +19,6 @@ namespace YooAsset.Editor
         {
             if (_buildResultContext == null)
                 _buildResultContext = context.GetContextObject<TaskBuilding_BBP.BuildResultContext>();
-
             return _buildResultContext.UnityManifest.GetAllDependencies(bundleName);
         }
     }
