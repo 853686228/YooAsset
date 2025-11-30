@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace YooAsset
@@ -16,6 +17,12 @@ namespace YooAsset
         internal override void InternalStart()
         {
         }
+
+        private IEnumerator TTTTtt()
+        {
+            yield return UnityEngine.Resources.LoadAsync("asdasd");
+        }
+        
         internal override void InternalUpdate()
         {
             // 获取可移除的下载器集合
@@ -26,6 +33,7 @@ namespace YooAsset
                 downloader.UpdateOperation();
                 if (downloader.IsDone)
                 {
+
                     _removeList.Add(valuePair.Key);
                     continue;
                 }

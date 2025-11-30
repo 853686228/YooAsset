@@ -102,7 +102,7 @@ namespace YooAsset
                 var dependLoaders = manager.CreateDependBundleFileLoaders(assetInfo);
                 if (dependLoaders.Count > 0)
                     _bundleLoaders.AddRange(dependLoaders);
-
+    
                 // 增加引用计数
                 foreach (var bundleLoader in _bundleLoaders)
                 {

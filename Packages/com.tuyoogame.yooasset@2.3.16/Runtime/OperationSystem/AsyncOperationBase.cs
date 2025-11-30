@@ -150,7 +150,7 @@ namespace YooAsset
         /// <summary>
         /// 开始异步操作
         /// </summary>
-        internal void StartOperation()
+        public void StartOperation()
         {
             if (Status == EOperationStatus.None)
             {

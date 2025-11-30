@@ -18,7 +18,7 @@ namespace YooAsset
         /// <summary>
         /// 当前下载的字节数
         /// </summary>
-        public long DownloadedBytes { protected set; get; }
+         public long DownloadedBytes { protected set; get; }
 
         /// <summary>
         /// 当前下载进度（0f - 1f）

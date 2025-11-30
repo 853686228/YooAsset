@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.greenbamboogames.playablegraphmonitor": {
+      "version": "2.6.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.tuyoogame.yooasset": {
       "version": "file:com.tuyoogame.yooasset@2.3.16",
       "depth": 0,
