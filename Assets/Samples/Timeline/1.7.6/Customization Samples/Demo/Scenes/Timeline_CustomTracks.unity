@@ -3168,6 +3168,8 @@ PlayableDirector:
   - key: {fileID: -6849029850004283421, guid: 301c96d6c1ead44479ab52481b2f2e09, type: 2}
     value: {fileID: 0}
   - key: {fileID: -8123863758205927005, guid: 301c96d6c1ead44479ab52481b2f2e09, type: 2}
+    value: {fileID: 1982837714}
+  - key: {fileID: -1422645637331527439, guid: 301c96d6c1ead44479ab52481b2f2e09, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -3199,7 +3201,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.9433962, g: 0.057849795, b: 0.057849795, a: 2}
+  m_Color: {r: 0.23359971, g: 0.6320754, b: 0.0029814949, a: 2}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

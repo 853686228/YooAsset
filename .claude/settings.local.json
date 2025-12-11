@@ -9,7 +9,8 @@
       "WebSearch",
       "Bash(openspec list:*)",
       "Bash(openspec:*)",
-      "mcp__filesystem__create_directory"
+      "mcp__filesystem__create_directory",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
