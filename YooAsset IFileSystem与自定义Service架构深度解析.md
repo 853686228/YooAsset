@@ -79,9 +79,33 @@ ResourcePackage (资源包裹)
         ├── DownloadFileAsync()
         └── GetBelongFileSystem()
 ```
-
 ---
 
+```
+  sequenceDiagram
+      participant User as 用户
+      participant RM as ResourceManager
+      participant PI as PlayModeImpl
+      participant FS as IFileSystem
+      participant Bundle as AssetBundle文件
+
+      User->>RM: LoadAssetAsync("Player")
+      RM->>PI: GetBundleInfo("player_assets")
+      PI->>FS: GetBelongFileSystem(bundle)
+      FS-->>PI: DefaultCacheFileSystem
+
+      PI->>FS: LoadBundleFile(bundle)
+      Note over FS: FileSystem负责：<br/>1. 检查文件是否存在<br/>2. 如果需要则下载<br/>3. 加载AssetBundle对象
+      FS->>Bundle: 加载物理文件
+      Bundle-->>FS: 返回AssetBundle对象
+
+      FS-->>PI: 返回BundleResult
+      PI-->>RM: 返回BundleInfo
+
+      Note over RM: ResourceManager负责：<br/>1. 创建Provider<br/>2. 管理引用计数<br/>3. 创建Handle
+      RM->>RM: 创建AssetProvider
+      RM-->>User: 返回AssetHandle
+```
 ## 2. IFileSystem使用方式与实现
 
 ### 2.1 核心实现类详解
